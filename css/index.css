@@ -1,0 +1,887 @@
+body {
+    margin: 0;
+    font-family: sans-serif;
+}
+
+/* Extra Small & Small (Mobile) */
+@media screen and (max-width: 576px) {
+    .header {
+        background-color: #000000;
+    }
+
+    .nav__menu a {display: none;}
+    .nav__menu a.icon {
+        float: right;
+        display: block;
+        background-color: #000000;
+    }
+    .nav__menu.responsive {position: relative;}
+    .nav__menu.responsive .icon {
+        position: absolute;
+        right: 0;
+        top: 0;
+    }
+    .nav__menu.responsive a {
+        float: none;
+        display: block;
+        text-align: left;
+    }
+
+    .nav__menu .icon {
+        font-size: 3em;
+    }
+
+    .nav__menu:not(:last-child) {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: #000000;
+    }
+
+    .nav__menu-item {
+        font-size: 2em;
+        color: rgb(0, 255, 0);
+        text-decoration: none;
+        background-color: #000000;
+        padding-left: 20px;
+    }
+
+    /* HOME */
+
+    .home {
+        background-color: #000000;
+    }
+        
+    .home__article {
+        color: rgb(255, 255, 255);
+        font-size: 25px;
+        padding: 60px;
+    } 
+
+    .home__article-heading {
+        color: rgb(0, 255, 0);
+        font-size: 3em;
+    }
+
+    /* ABOUT */
+    .about {
+        background-color: #000000;
+        color: white;
+    }
+
+    .about__article {
+        font-size: 25px;
+        display: flex;
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    .about__heaading--color {
+        color: rgb(0, 255, 0);
+    }
+
+    .about__pfp img {
+        width: 200px;
+    }
+
+    .about__skills {
+        background-color: #1a1a1a;
+        padding: 50px;
+    }
+
+    .about__skills-bar {
+        background-color: red;
+        height: 5px;
+        display: flex;
+        justify-content: flex-end;
+        margin-bottom: 50px;
+    }
+
+    .about__skills-div h3 {
+        animation-name: example;
+        animation-duration: 6s;
+        animation-iteration-count: infinite;
+        font-size: 1.5em;
+    }
+
+    .about__skills-div:nth-child(2) {width: 95%;}
+    .about__skills-div:nth-child(3) {width: 20%;}
+    .about__skills-div:nth-child(4) {width: 90%;}
+
+    @keyframes example {
+        25% {color: rgb(255, 255, 255);}
+        50% {color: rgb(0, 255, 21);}
+        75% {color: rgb(208, 255, 0);}
+        85% {color: rgb(0, 204, 255);}
+        100% {color: rgb(255, 255, 255);}
+    }
+
+    /* PROJECTS */
+    
+    .projects {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        background-color: #000000;
+    }
+
+    .projects__box {
+        color: white;
+        border: 15px solid black;
+        margin: 20px;
+        overflow: hidden;
+    }
+
+    .projects__box img {
+        transition: transform 0.4s ease-in-out;
+        width: 200px;
+    }
+
+    .projects__box img:hover {
+        transform: scale(1.06);
+        transition: 0.4s;
+    }
+
+    /* CONTACT */
+
+    .contact {
+        background-color: #000000;
+        display: flex;
+        justify-content: center;
+        padding-top: 80px;
+        padding-bottom: 80px;
+    }
+
+    .contact__article {
+        border: 1px solid #ccc;
+        box-shadow: 0px 0px 10px #ccc;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        flex-direction: column;
+        width: 300px;
+    }
+    
+    .contact__form {    
+        color: rgb(0, 255, 0);
+    }
+    
+    label {
+        display: block;
+        margin-top: 20px;
+    }
+    
+    input[type="text"]::placeholder, input[type="email"]::placeholder, textarea::placeholder  {
+        color: rgb(0, 255, 0);
+    }
+
+    input[type="text"], input[type="email"], textarea {
+        margin-top: 5px;
+        border: none;
+        border-bottom: 2px solid white;
+        box-sizing: border-box;
+        background-color: #000000;
+        width: 300px;
+    }
+
+    input[type="text"], input[type="email"] {
+        height: 70px;
+    }
+    
+    input[type="submit"] {
+        background-color: #ffffff;
+        color: rgb(0, 0, 0);
+        padding: 15px 60px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        margin-top: 20px;
+    }
+    
+    input[type="submit"]:hover {
+        background-color: rgb(0, 255, 0);
+    }
+    
+    .contact__details {
+        display: flex;
+        flex-direction: column;
+        color: rgb(255, 255, 255);
+    }
+
+    .contact__details a {
+        text-decoration: none;
+        color: white;
+        line-height: 160%;
+    }
+
+    .contact__details a:hover {
+        color: rgb(0, 255, 0);
+    }
+
+    #name, #email, #message {
+        color: red;
+    }
+
+    #name:focus, #name:valid, #email:focus, #email:valid, #message:focus, #message:valid {
+        transform: translateY(-5px);
+        color: red;
+        transition: 0.3s;
+    }
+
+    /* FOOTER */
+
+    footer {
+        background-color: #000000;
+    }
+
+    footer h1 {
+        color: rgb(0, 255, 0);
+    }
+
+    .footer__scl-media {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        font-size: 4em;
+    }
+
+    .footer__scl-media i {
+        margin: 40px;
+    }
+
+    .footer__text {
+        display: flex;
+        justify-content: flex-start;
+        flex-wrap: wrap;
+        padding-left: 50px;
+    }
+
+    .footer__text-about {
+        display: flex;
+        flex-direction: column;
+        color: white;
+        font-size: 24px;
+    }
+
+    .footer__text-contact {
+        display: flex;
+        flex-direction: column;
+        font-size: 24px;
+        line-height: 200%;
+    }
+
+    .footer__text-contact a {
+        text-decoration: none;
+        color: white;
+    }
+
+    .footer__text-contact a:hover {
+        color: rgb(0, 255, 0);
+    }
+
+    .footer__text-contact i {
+        margin-right: 15px;
+    }
+}
+
+/* Medium (Tablet) */
+@media screen and (max-width: 768px) {
+    .header {
+        height: 80px;
+        background-color: #000000;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    .header__text {
+        color: rgb(0, 255, 0);
+        font-family: 'Courier New', Courier, monospace;
+    }
+
+    .nav__menu a {display: none;}
+    .nav__menu a.icon {
+        float: right;
+        display: block;
+        background-color: #000000;
+    }
+    .nav__menu.responsive {position: relative;}
+    .nav__menu.responsive .icon {
+        position: absolute;
+        right: 0;
+        top: 0;
+    }
+    .nav__menu.responsive a {
+        float: none;
+        display: block;
+        text-align: left;
+    }
+
+    .nav__menu .icon {
+        font-size: 3em;
+    }
+
+    .nav__menu-item {
+        font-size: 2em;
+        color: rgb(0, 255, 0);
+        text-decoration: none;
+        background-color: #000000;
+        padding-left: 20px;
+    }
+
+    .nav__menu-icon {
+        padding-top: 30px;
+        padding-left: 20px;
+        background-color: #000000;
+    }
+
+    /* HOME */
+
+    .home {
+        background-color: #000000;
+    }
+
+    .home__article {
+        color: rgb(255, 255, 255);
+        font-size: 25px;
+        padding: 20px;
+    } 
+
+    .home__article-heading {
+        color: rgb(0, 255, 0);
+        font-size: 3em;
+    }
+
+    /* ABOUT */
+    .about {
+        background-color: #000000;
+        color: white;
+    }
+
+    .about__article {
+        font-size: 25px;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        padding: 20px;
+    }
+
+
+    .about__heading--color {
+        color: rgb(0, 255, 0);
+    }
+
+    .about__pfp img {
+        width: 300px;
+    }
+    
+    .about__skills {
+        background-color: #1a1a1a;
+        padding: 50px;
+    }
+
+    .about__skills-bar {
+        background-color: red;
+        height: 5px;
+        display: flex;
+        justify-content: flex-end;
+        margin-bottom: 50px;
+    }
+
+    .about__skills-div h3 {
+        animation-name: example;
+        animation-duration: 6s;
+        animation-iteration-count: infinite;
+        font-size: 1.5em;
+    }
+
+    .about__skills-div:nth-child(2) {width: 95%;}
+    .about__skills-div:nth-child(3) {width: 20%;}
+    .about__skills-div:nth-child(4) {width: 90%;}
+
+    @keyframes example {
+        25% {color: rgb(255, 255, 255);}
+        50% {color: rgb(0, 255, 21);}
+        75% {color: rgb(208, 255, 0);}
+        85% {color: rgb(0, 204, 255);}
+        100% {color: rgb(255, 255, 255);}
+    }
+
+    /* PROJECTS */
+    
+    .projects {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        background-color: #000000;
+    }
+
+    .projects__box {
+        color: white;
+        border: 15px solid black;
+        margin: 20px;
+        overflow: hidden;
+    }
+
+
+    .projects__box img {
+        transition: transform 0.4s ease-in-out;
+    }
+
+    .projects__box img:hover {
+        transform: scale(1.06);
+        transition: 0.4s;
+    }
+
+    /* CONTACT */
+
+    .contact {
+        background-color: #000000;
+        display: flex;
+        justify-content: center;
+        padding-top: 80px;
+        padding-bottom: 80px;
+    }
+
+    .contact__article {
+        border: 1px solid #ccc;
+        box-shadow: 0px 0px 10px #ccc;
+        display: flex;
+        justify-content: center;
+        padding: 20px;
+        flex-wrap: wrap;
+        flex-direction: column;
+        width: 300px;
+    }
+    
+    .contact__form {    
+        color: rgb(0, 255, 0);
+        font-size: 2em;
+    }
+    
+    label {
+        display: block;
+        margin-top: 20px;
+    }
+    
+    input[type="text"]::placeholder, input[type="email"]::placeholder, textarea::placeholder  {
+        color: rgb(0, 255, 0);
+        font-size: 2em;
+    }
+
+    input[type="text"], input[type="email"], textarea {
+        width: 100%;
+        padding: 10px;
+        margin-top: 5px;
+        border: none;
+        border-bottom: 2px solid white;
+        box-sizing: border-box;
+        background-color: #000000;
+        width: 300px;
+    }
+
+    input[type="text"], input[type="email"] {
+        height: 70px;
+    }
+    
+    input[type="submit"] {
+        background-color: #ffffff;
+        color: rgb(0, 0, 0);
+        padding: 15px 60px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        margin-top: 20px;
+    }
+    
+    input[type="submit"]:hover {
+        background-color: rgb(0, 255, 0);
+    }
+    
+    .contact__details {
+        display: flex;
+        flex-direction: column;
+        color: rgb(0, 255, 0);
+        font-size: 25px;
+    }
+
+    .contact__details a {
+        text-decoration: none;
+        color: white;
+        line-height: 160%;
+    }
+
+    .contact__details a:hover {
+        color: rgb(0, 255, 0);
+    }
+
+    #name, #email, #message {
+        color: red;
+    }
+
+    #name:focus, #name:valid, #email:focus, #email:valid, #message:focus, #message:valid {
+        transform: translateY(-5px);
+        color: red;
+        transition: 0.3s;
+    }
+
+    /* FOOTER */
+
+    footer {
+        background-color: #000000;
+    }
+
+    footer h1 {
+        color: rgb(0, 255, 0);
+    }
+
+    .footer__scl-media {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        font-size: 4em;
+    }
+
+    .footer__scl-media i {
+        margin: 40px;
+    }
+
+    .footer__text {
+        display: flex;
+        justify-content: flex-start;
+        flex-wrap: wrap;
+        padding-left: 50px;
+    }
+
+    .footer__text-about {
+        display: flex;
+        flex-direction: column;
+        color: white;
+        font-size: 24px;
+    }
+
+    .footer__text-contact {
+        display: flex;
+        flex-direction: column;
+        font-size: 24px;
+        line-height: 200%;
+    }
+
+    .footer__text-contact a {
+        text-decoration: none;
+        color: white;
+    }
+
+    .footer__text-contact a:hover {
+        color: rgb(0, 255, 0);
+    }
+
+    .footer__text-contact i {
+        margin-right: 15px;
+    }
+}
+
+/* Large, Extra Large, Extra Extra Large (Monitor screens)*/
+@media screen and (min-width: 769px) {
+    .header {
+        height: 80px;
+        background-color: #000000;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    .header__text {
+        color: rgb(0, 255, 0);
+        font-family: 'Courier New', Courier, monospace;
+    }
+
+    .nav__menu {
+        top: 0;
+        height: 70px;
+        position: sticky;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #000000;
+    }
+
+    .nav__menu .icon {
+        display: none;
+    }
+
+    .nav__menu-item {
+        text-decoration: none;
+        color: rgb(0, 255, 0);
+        font-size: 2em;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        padding-left: 30px;
+        padding-right: 30px;
+        background-color: #000000;
+    }
+
+    .nav__menu-item:hover {
+        background-color: rgba(128, 128, 128, 0.397);
+    }
+
+    /* HOME */
+
+    .home {
+        background-image: url(/images/background-dark.png);
+        background-size: cover;
+        display: flex;
+        justify-content: flex-start;
+    }
+
+    .home__article {
+        color: rgb(255, 255, 255);
+        font-size: 25px;
+        margin-left: 150px;
+        height: 100vh;
+    } 
+
+    .home__article-heading {
+        color: rgb(0, 255, 0);
+        font-size: 3em;
+    }
+
+    .home__paragraph--width {
+        width: 70%;
+    }
+
+    /* ABOUT */
+    .about {
+        background-color: #000000;
+        color: white;
+        padding: 100px;
+    }
+
+    .about__article {
+        font-size: 2em;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        flex-direction: row;
+    }
+
+    .about__text {
+        width: 60%;
+    }
+
+    .about__heading--color {
+        color: rgb(0, 255, 0);
+    }
+
+    .about__pfp img {
+        height: 600px;
+    }
+
+    .about__skills {
+        background-color: #1a1a1a;
+        padding: 50px;
+    }
+
+    .about__skills-bar {
+        background-color: red;
+        height: 5px;
+        display: flex;
+        justify-content: flex-end;
+        margin-bottom: 50px;
+    }
+
+    .about__skills-div h3 {
+        animation-name: example;
+        animation-duration: 6s;
+        animation-iteration-count: infinite;
+        font-size: 1.5em;
+    }
+
+    .about__skills-div:nth-child(2) {width: 95%;}
+    .about__skills-div:nth-child(3) {width: 20%;}
+    .about__skills-div:nth-child(4) {width: 90%;}
+
+    @keyframes example {
+        25% {color: rgb(255, 255, 255);}
+        50% {color: rgb(0, 255, 21);}
+        75% {color: rgb(208, 255, 0);}
+        85% {color: rgb(0, 204, 255);}
+        100% {color: rgb(255, 255, 255);}
+    }
+ 
+    /* PROJECTS */
+    
+    .projects {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        background-color: #000000;
+    }
+
+    .projects__box {
+        color: white;
+        border: 15px solid black;
+        margin: 20px;
+        overflow: hidden;
+    }
+
+    .projects__box img {
+        transition: transform 0.4s ease-in-out;
+    }
+
+    .projects__box img:hover {
+        transform: scale(1.06);
+        transition: 0.4s;
+    }
+
+    /* CONTACT */
+
+    .contact {
+        background-color: #000000;
+        display: flex;
+        justify-content: center;
+        padding-top: 80px;
+        padding-bottom: 80px;
+    }
+
+    .contact__article {
+        border: 1px solid #ccc;
+        box-shadow: 0px 0px 10px #ccc;
+        display: flex;
+        justify-content: center;
+        padding: 50px;
+        width: 70%;
+        flex-wrap: wrap;
+    }
+    
+    .contact__form {    
+        color: rgb(0, 255, 0);
+        width: 60%;
+        margin-right: 70px;
+        font-size: 2em;
+    }
+    
+    label {
+        display: block;
+        margin-top: 20px;
+    }
+    
+    input[type="text"]::placeholder, input[type="email"]::placeholder, textarea::placeholder  {
+        color: rgb(0, 255, 0);
+        font-size: 1em;
+    }
+
+    input[type="text"], input[type="email"], textarea {
+        width: 100%;
+        padding: 10px;
+        margin-top: 5px;
+        border: none;
+        box-sizing: border-box;
+        background-color: #000000;
+        border-bottom: 2px solid white;
+    }
+
+    input[type="text"], input[type="email"] {
+        height: 70px;
+    }
+    
+    input[type="submit"] {
+        background-color: #ffffff;
+        color: rgb(0, 0, 0);
+        padding: 15px 60px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        margin-top: 20px;
+    }
+    
+    input[type="submit"]:hover {
+        background-color: rgb(0, 255, 0);
+    }
+    
+    .contact__details {
+        display: flex;
+        flex-direction: column;
+        color: rgb(0, 255, 0);
+        font-size: 2em;
+    }
+
+    .contact__details a {
+        text-decoration: none;
+        color: white;
+        line-height: 160%;
+    }
+
+    .contact__details a:hover {
+        color: rgb(0, 255, 0);
+    }
+
+    #name, #email, #message {
+        color: red;
+        font-size: 25px;
+    }
+
+    #name:focus, #name:valid, #email:focus, #email:valid, #message:focus, #message:valid {
+        transform: translateY(-5px);
+        color: red;
+        transition: 0.3s;
+    }
+    /* FOOTER */
+
+    footer {
+        background-color: #000000;
+        padding-bottom: 30px;
+    }
+
+    footer h1 {
+        color: rgb(0, 255, 0);
+    }
+
+    .footer__scl-media {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        font-size: 4em;
+    }
+
+    .footer__scl-media i {
+        margin: 40px;
+    }
+
+    .footer__text {
+        display: flex;
+        justify-content: flex-start;
+        flex-wrap: wrap;    
+        padding-left: 150px;
+    }
+
+    .footer__text-about {
+        display: flex;
+        flex-direction: column;
+        color: white;
+        font-size: 24px;
+        width: 30%;
+    }
+
+    .footer__text-contact {
+        display: flex;
+        flex-direction: column;
+        font-size: 24px;
+        line-height: 200%;
+    }
+
+    .footer__text-contact a {
+        text-decoration: none;
+        color: white;
+    }
+
+    .footer__text-contact a:hover {
+        color: rgb(0, 255, 0);
+    }
+
+    .footer__text-contact i {
+        margin-right: 15px;
+    }
+}

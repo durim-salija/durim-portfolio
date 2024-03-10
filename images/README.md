@@ -1,0 +1,1 @@
+# Use this folder to store the images of your project.
